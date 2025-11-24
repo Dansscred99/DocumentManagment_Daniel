@@ -1,0 +1,75 @@
+/*****************************************
+ * COLORES PRINCIPALES
+ *****************************************/
+:root {
+    --color-sidebar: #0d1b2a;
+    --color-topbar: #1b263b;
+    --color-white: #ffffff;
+    --color-primary: #0d1b2a;
+}
+
+/*****************************************
+ * SIDEBAR
+ *****************************************/
+#sidebar {
+    background-color: var(--color-sidebar);
+}
+
+#sidebar .nav-link {
+    color: var(--color-white);
+}
+
+#sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*****************************************
+ * TOPBAR
+ *****************************************/
+#topbar {
+    background-color: var(--color-topbar);
+}
+
+#topbar i,
+#topbar input,
+#topbar span {
+    color: var(--color-white) !important;
+}
+
+#topbar input.form-control {
+    background-color: var(--color-white);
+    color: #333 !important;
+}
+
+/*****************************************
+ * BOTONES
+ *****************************************/
+.btn-primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.btn-outline-primary {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+}
+
+/*****************************************
+ * TARJETAS
+ *****************************************/
+.card {
+    border-color: #d9d9d9;
+    background-color: var(--color-white);
+}
+
+/*****************************************
+ * BODY BACKGROUND
+ *****************************************/
+body {
+    background-color: #f5f6f8;
+}

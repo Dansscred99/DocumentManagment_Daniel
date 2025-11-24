@@ -1,0 +1,52 @@
+<div class="container text-white">
+
+    <h3 class="mb-4">Modificar datos</h3>
+
+    <div class="row">
+
+        <!-- FOTO -->
+        <div class="col-md-4 text-center">
+
+            <img id="fotoPreview"
+                th:src="${usuarioFoto != null} ? @{'/uploads/fotos/' + ${usuarioFoto}} : @{/img/default-user.png}"
+                class="rounded-circle mb-3" style="width:150px; height:150px; object-fit:cover;">
+
+            <input type="file" id="fotoInput" class="form-control mt-3" accept="image/*">
+        </div>
+
+        <!-- DATOS -->
+        <div class="col-md-8">
+
+            <input type="hidden" id="idUsuario" th:value="${idUsuario}">
+
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" id="nombre" class="form-control" th:value="${usuarioNombre}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Apellido</label>
+                <input type="text" id="apellido" class="form-control" th:value="${usuarioApellido}">
+            </div>
+
+            <hr class="border-secondary">
+
+            <h5 class="mb-3">Cambiar contraseña</h5>
+
+            <div class="mb-3">
+                <label class="form-label">Nueva contraseña</label>
+                <input type="password" id="pass1" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Confirmar contraseña</label>
+                <input type="password" id="pass2" class="form-control">
+            </div>
+
+            <button class="btn btn-primary" onclick="guardarPerfil()">
+                Guardar cambios
+            </button>
+
+        </div>
+    </div>
+</div>
