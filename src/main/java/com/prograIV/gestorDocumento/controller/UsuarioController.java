@@ -24,10 +24,7 @@ public class UsuarioController {
     private final UsuarioDatosRepository usuarioDatosRepository;
     private final PasswordEncoder passwordEncoder;
 
-    /**
-     * Create a new user (form submit). Allowed publicly per SecurityConfig.
-     * Fields: username, password, nombre (optional), rol (optional, default "user").
-     */
+
     @PostMapping("/crear")
     public String crearUsuario(
             @RequestParam("username") String username,
