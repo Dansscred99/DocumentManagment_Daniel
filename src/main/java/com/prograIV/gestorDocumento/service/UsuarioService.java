@@ -33,7 +33,22 @@ public class UsuarioService {
 
         UsuarioDatos datos = new UsuarioDatos();
         datos.setUsuario(u);
-        datos.setNombre(nombreCompleto);
+
+        // dividir nombreCompleto en nombre y apellido (si es posible)
+        if (nombreCompleto != null && !nombreCompleto.isBlank()) {
+            String trimmed = nombreCompleto.trim();
+            String[] parts = trimmed.split("\\s+", 2);
+            datos.setNombre(parts[0]);
+            if (parts.length > 1) {
+                datos.setApellido(parts[1]);
+            } else {
+                datos.setApellido(""); // evitar null para la columna
+            }
+        } else {
+            datos.setNombre("");
+            datos.setApellido("");
+        }
+
         datos.setCorreo(correo);
         datos.setTelefono(telefono);
         datos.setRol(rol);
