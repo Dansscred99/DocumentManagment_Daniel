@@ -23,6 +23,12 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+#sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 3px solid #0084ff;
+    padding-left: calc(0.75rem - 3px);
+}
+
 /*****************************************
  * TOPBAR
  *****************************************/

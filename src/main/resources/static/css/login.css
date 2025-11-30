@@ -1,58 +1,181 @@
-/* Fondo oscuro elegante */
-        body {
-            min-height: 100vh;
-            background: radial-gradient(1200px circle at top, #1b1f24, #0b0d10 60%, #050607 100%);
-            color: #e5e7eb;
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-        }
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 oct 2025, 12:18:39 p.m.
+    Author     : HP-NUEVO
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0, 0, 60, 0.7), rgba(0, 0, 60, 0.7));
+    background-size: cover;
+    color: #fff;
+}
 
-        /* Header oscuro */
-        .app-header {
-            background: rgba(18, 18, 18, 0.9);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            backdrop-filter: blur(6px);
-        }
+.avatar {
+    width: 180px;
+    height: 120px;
+    margin: 0 auto 28px;
+    border-radius: 10%;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(50, 50, 50, 0.08);
+}
 
-        /* Card glass */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            box-shadow:
-                0 10px 30px rgba(0,0,0,0.6),
-                inset 0 1px 0 rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-        }
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        /* Inputs oscuros */
-        .form-control.dark-input {
-            background: rgba(17, 17, 17, 0.9);
-            border: 1px solid #2a2f36;
-            color: #e5e7eb;
-            border-radius: 10px;
-            padding: 10px 12px;
-        }
-        .form-control.dark-input:focus {
-            background: rgba(17, 17, 17, 1);
-            color: #fff;
-            border-color: #0d6efd; /* azul clásico */
-            box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
-        }
+.login-container {
+    width: 500px;
+    margin: 8% auto;
+    background: rgba(0, 0, 40, 0.85);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    text-align: center;
+}
 
-        /* Botón principal */
-        .btn-primary.soft {
-            border-radius: 10px;
-            padding: 10px 14px;
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            box-shadow: 0 8px 18px rgba(13,110,253,0.35);
-        }
-        .btn-primary.soft:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 22px rgba(13,110,253,0.45);
-        }
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFD700;
+}
 
-        /* Separación del header */
-        .page-wrap {
-            min-height: calc(100vh - 64px);
-        }
+.login-container img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 94%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background: #f0f0f0;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login {
+    background: #003366;
+    color: white;
+}
+
+.btn-login:hover {
+    background: #002244;
+}
+
+.btn-register {
+    background: #FFD700;
+    color: #000;
+}
+
+.btn-register:hover {
+    background: #e6c200;
+}
+
+.footer {
+    margin-top: 8px 0px 20px 0px;
+    font-size: 15px;
+    color: #ccc;
+}
+/* =============================
+   BREAKPOINTS RESPONSIVOS
+============================= */
+
+@media (max-width: 1024px) {
+    .search-container input {
+        width: 180px;
+    }
+    .sidebar {
+        width: 180px;
+        padding: 15px;
+    }
+    .header-left h1 {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .search-container input {
+        width: 100%;
+    }
+    .header-right {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        order: 2;
+        border-right: none;
+        border-top: 1px solid #ddd;
+    }
+    .content {
+        order: 1;
+        padding: 20px;
+    }
+    .doc-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    .menu-btn {
+        font-size: 18px;
+    }
+    .avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .user-info {
+        gap: 5px;
+        padding: 4px 8px;
+    }
+    .upload-box {
+        padding: 25px 10px;
+    }
+    .contenedor-archivos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .card {
+        padding: 15px;
+    }
+    .header-left h1 {
+        font-size: 16px;
+    }
+}

@@ -22,12 +22,14 @@
         <!-- SIDEBAR -->
         <aside class="p-3 d-flex flex-column" style="width: 260px; min-height: 100vh;" id="sidebar">
 
-            <!-- LOGO + NOMBRE -->
+            <!-- LOGO + NOMBRE (clickable to return home) -->
             <div class="mb-4">
-                <h5 class="fw-bold text-white d-flex align-items-center gap-2 mb-0">
-                    <i class="bi bi-box-seam"></i>
-                    Gestión Documental
-                </h5>
+                <a href="#" onclick="recargarDashboard(); return false;" style="text-decoration: none; cursor: pointer;">
+                    <h5 class="fw-bold text-white d-flex align-items-center gap-2 mb-0" style="transition: opacity 0.2s;">
+                        <i class="bi bi-box-seam"></i>
+                        Gestión Documental
+                    </h5>
+                </a>
             </div>
 
             <!-- SECCIÓN PRINCIPAL -->

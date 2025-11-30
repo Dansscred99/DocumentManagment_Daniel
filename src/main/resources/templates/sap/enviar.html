@@ -1,0 +1,52 @@
+<!-- Enviar Documentos -->
+<div class="mb-4">
+    <h2 class="fw-bold text-white">Enviar Documento</h2>
+    <p class="text-secondary">Carga un nuevo documento en formato .docx</p>
+</div>
+
+<div class="rounded shadow-sm p-4" style="background-color: #1b263b;">
+    <form id="formEnviar" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="mb-3">
+                    <label class="form-label text-white">Título del Documento</label>
+                    <input type="text" class="form-control" name="titulo" placeholder="Ej: Informe Mensual" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-white">Descripción (opcional)</label>
+                    <textarea class="form-control" name="descripcion" rows="3" placeholder="Describe el contenido..."></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-white">Seleccionar Archivo (.docx)</label>
+                    <input type="file" class="form-control" name="archivo" accept=".docx" required>
+                    <small class="text-secondary">Solo se aceptan archivos .docx</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-upload"></i> Subir Documento
+                </button>
+            </div>
+
+            <div class="col-md-4">
+                <div class="alert alert-info">
+                    <h6 class="fw-bold">Requisitos</h6>
+                    <ul class="mb-0 small">
+                        <li>Formato: .docx</li>
+                        <li>Tamaño máx: 10 MB</li>
+                        <li>Será revisado por un administrador</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("formEnviar").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        alert("Funcionalidad de upload en desarrollo");
+        // TODO: Implementar upload real
+    });
+</script>
